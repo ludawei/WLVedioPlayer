@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE0ECC4F1B5FA503005639BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ECC4E1B5FA503005639BF /* main.m */; };
+		EE0ECC521B5FA503005639BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ECC511B5FA503005639BF /* AppDelegate.m */; };
+		EE0ECC551B5FA503005639BF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ECC541B5FA503005639BF /* ViewController.m */; };
+		EE0ECC581B5FA503005639BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE0ECC561B5FA503005639BF /* Main.storyboard */; };
+		EE0ECC5A1B5FA503005639BF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE0ECC591B5FA503005639BF /* Images.xcassets */; };
+		EE0ECC5D1B5FA503005639BF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE0ECC5B1B5FA503005639BF /* LaunchScreen.xib */; };
+		EE0ECC691B5FA503005639BF /* WLVedioPlayerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ECC681B5FA503005639BF /* WLVedioPlayerDemoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE0ECC631B5FA503005639BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE0ECC411B5FA503005639BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE0ECC481B5FA503005639BF;
+			remoteInfo = WLVedioPlayerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE0ECC491B5FA503005639BF /* WLVedioPlayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WLVedioPlayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE0ECC4D1B5FA503005639BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE0ECC4E1B5FA503005639BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE0ECC501B5FA503005639BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EE0ECC511B5FA503005639BF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EE0ECC531B5FA503005639BF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EE0ECC541B5FA503005639BF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EE0ECC571B5FA503005639BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE0ECC591B5FA503005639BF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EE0ECC5C1B5FA503005639BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EE0ECC621B5FA503005639BF /* WLVedioPlayerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WLVedioPlayerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE0ECC671B5FA503005639BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE0ECC681B5FA503005639BF /* WLVedioPlayerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLVedioPlayerDemoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE0ECC461B5FA503005639BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE0ECC5F1B5FA503005639BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE0ECC401B5FA503005639BF = {
+			isa = PBXGroup;
+			children = (
+				EE0ECC4B1B5FA503005639BF /* WLVedioPlayerDemo */,
+				EE0ECC651B5FA503005639BF /* WLVedioPlayerDemoTests */,
+				EE0ECC4A1B5FA503005639BF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE0ECC4A1B5FA503005639BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE0ECC491B5FA503005639BF /* WLVedioPlayerDemo.app */,
+				EE0ECC621B5FA503005639BF /* WLVedioPlayerDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE0ECC4B1B5FA503005639BF /* WLVedioPlayerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EE0ECC501B5FA503005639BF /* AppDelegate.h */,
+				EE0ECC511B5FA503005639BF /* AppDelegate.m */,
+				EE0ECC531B5FA503005639BF /* ViewController.h */,
+				EE0ECC541B5FA503005639BF /* ViewController.m */,
+				EE0ECC561B5FA503005639BF /* Main.storyboard */,
+				EE0ECC591B5FA503005639BF /* Images.xcassets */,
+				EE0ECC5B1B5FA503005639BF /* LaunchScreen.xib */,
+				EE0ECC4C1B5FA503005639BF /* Supporting Files */,
+			);
+			path = WLVedioPlayerDemo;
+			sourceTree = "<group>";
+		};
+		EE0ECC4C1B5FA503005639BF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE0ECC4D1B5FA503005639BF /* Info.plist */,
+				EE0ECC4E1B5FA503005639BF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE0ECC651B5FA503005639BF /* WLVedioPlayerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE0ECC681B5FA503005639BF /* WLVedioPlayerDemoTests.m */,
+				EE0ECC661B5FA503005639BF /* Supporting Files */,
+			);
+			path = WLVedioPlayerDemoTests;
+			sourceTree = "<group>";
+		};
+		EE0ECC661B5FA503005639BF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE0ECC671B5FA503005639BF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE0ECC481B5FA503005639BF /* WLVedioPlayerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE0ECC6C1B5FA503005639BF /* Build configuration list for PBXNativeTarget "WLVedioPlayerDemo" */;
+			buildPhases = (
+				EE0ECC451B5FA503005639BF /* Sources */,
+				EE0ECC461B5FA503005639BF /* Frameworks */,
+				EE0ECC471B5FA503005639BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WLVedioPlayerDemo;
+			productName = WLVedioPlayerDemo;
+			productReference = EE0ECC491B5FA503005639BF /* WLVedioPlayerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE0ECC611B5FA503005639BF /* WLVedioPlayerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE0ECC6F1B5FA503005639BF /* Build configuration list for PBXNativeTarget "WLVedioPlayerDemoTests" */;
+			buildPhases = (
+				EE0ECC5E1B5FA503005639BF /* Sources */,
+				EE0ECC5F1B5FA503005639BF /* Frameworks */,
+				EE0ECC601B5FA503005639BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE0ECC641B5FA503005639BF /* PBXTargetDependency */,
+			);
+			name = WLVedioPlayerDemoTests;
+			productName = WLVedioPlayerDemoTests;
+			productReference = EE0ECC621B5FA503005639BF /* WLVedioPlayerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE0ECC411B5FA503005639BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = weather;
+				TargetAttributes = {
+					EE0ECC481B5FA503005639BF = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					EE0ECC611B5FA503005639BF = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = EE0ECC481B5FA503005639BF;
+					};
+				};
+			};
+			buildConfigurationList = EE0ECC441B5FA503005639BF /* Build configuration list for PBXProject "WLVedioPlayerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE0ECC401B5FA503005639BF;
+			productRefGroup = EE0ECC4A1B5FA503005639BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE0ECC481B5FA503005639BF /* WLVedioPlayerDemo */,
+				EE0ECC611B5FA503005639BF /* WLVedioPlayerDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE0ECC471B5FA503005639BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE0ECC581B5FA503005639BF /* Main.storyboard in Resources */,
+				EE0ECC5D1B5FA503005639BF /* LaunchScreen.xib in Resources */,
+				EE0ECC5A1B5FA503005639BF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE0ECC601B5FA503005639BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE0ECC451B5FA503005639BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE0ECC551B5FA503005639BF /* ViewController.m in Sources */,
+				EE0ECC521B5FA503005639BF /* AppDelegate.m in Sources */,
+				EE0ECC4F1B5FA503005639BF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE0ECC5E1B5FA503005639BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE0ECC691B5FA503005639BF /* WLVedioPlayerDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE0ECC641B5FA503005639BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE0ECC481B5FA503005639BF /* WLVedioPlayerDemo */;
+			targetProxy = EE0ECC631B5FA503005639BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE0ECC561B5FA503005639BF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE0ECC571B5FA503005639BF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE0ECC5B1B5FA503005639BF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE0ECC5C1B5FA503005639BF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE0ECC6A1B5FA503005639BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE0ECC6B1B5FA503005639BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE0ECC6D1B5FA503005639BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WLVedioPlayerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EE0ECC6E1B5FA503005639BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WLVedioPlayerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EE0ECC701B5FA503005639BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WLVedioPlayerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WLVedioPlayerDemo.app/WLVedioPlayerDemo";
+			};
+			name = Debug;
+		};
+		EE0ECC711B5FA503005639BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WLVedioPlayerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WLVedioPlayerDemo.app/WLVedioPlayerDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE0ECC441B5FA503005639BF /* Build configuration list for PBXProject "WLVedioPlayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE0ECC6A1B5FA503005639BF /* Debug */,
+				EE0ECC6B1B5FA503005639BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE0ECC6C1B5FA503005639BF /* Build configuration list for PBXNativeTarget "WLVedioPlayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE0ECC6D1B5FA503005639BF /* Debug */,
+				EE0ECC6E1B5FA503005639BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EE0ECC6F1B5FA503005639BF /* Build configuration list for PBXNativeTarget "WLVedioPlayerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE0ECC701B5FA503005639BF /* Debug */,
+				EE0ECC711B5FA503005639BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE0ECC411B5FA503005639BF /* Project object */;
+}
