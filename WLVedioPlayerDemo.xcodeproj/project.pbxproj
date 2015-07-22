@@ -14,6 +14,11 @@
 		EE0ECC5A1B5FA503005639BF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE0ECC591B5FA503005639BF /* Images.xcassets */; };
 		EE0ECC5D1B5FA503005639BF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE0ECC5B1B5FA503005639BF /* LaunchScreen.xib */; };
 		EE0ECC691B5FA503005639BF /* WLVedioPlayerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ECC681B5FA503005639BF /* WLVedioPlayerDemoTests.m */; };
+		EE0ECC751B5FA52B005639BF /* WLVedioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ECC741B5FA52B005639BF /* WLVedioPlayer.m */; };
+		EE0ECC781B5FA539005639BF /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ECC771B5FA539005639BF /* PlayerView.m */; };
+		EE0ECC7B1B5FA5AA005639BF /* UIView+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ECC7A1B5FA5AA005639BF /* UIView+Extra.m */; };
+		EE0ECC7E1B5FA64F005639BF /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0ECC7D1B5FA64F005639BF /* PlayerViewController.m */; };
+		EE0ECC801B5FA887005639BF /* videoviewdemo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EE0ECC7F1B5FA887005639BF /* videoviewdemo.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,15 @@
 		EE0ECC621B5FA503005639BF /* WLVedioPlayerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WLVedioPlayerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE0ECC671B5FA503005639BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE0ECC681B5FA503005639BF /* WLVedioPlayerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLVedioPlayerDemoTests.m; sourceTree = "<group>"; };
+		EE0ECC731B5FA52B005639BF /* WLVedioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLVedioPlayer.h; sourceTree = "<group>"; };
+		EE0ECC741B5FA52B005639BF /* WLVedioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLVedioPlayer.m; sourceTree = "<group>"; };
+		EE0ECC761B5FA539005639BF /* PlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerView.h; sourceTree = "<group>"; };
+		EE0ECC771B5FA539005639BF /* PlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerView.m; sourceTree = "<group>"; };
+		EE0ECC791B5FA5AA005639BF /* UIView+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extra.h"; sourceTree = "<group>"; };
+		EE0ECC7A1B5FA5AA005639BF /* UIView+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extra.m"; sourceTree = "<group>"; };
+		EE0ECC7C1B5FA64F005639BF /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		EE0ECC7D1B5FA64F005639BF /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		EE0ECC7F1B5FA887005639BF /* videoviewdemo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = videoviewdemo.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +77,7 @@
 		EE0ECC401B5FA503005639BF = {
 			isa = PBXGroup;
 			children = (
+				EE0ECC721B5FA51C005639BF /* WLVedioPlayer */,
 				EE0ECC4B1B5FA503005639BF /* WLVedioPlayerDemo */,
 				EE0ECC651B5FA503005639BF /* WLVedioPlayerDemoTests */,
 				EE0ECC4A1B5FA503005639BF /* Products */,
@@ -81,6 +96,8 @@
 		EE0ECC4B1B5FA503005639BF /* WLVedioPlayerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EE0ECC791B5FA5AA005639BF /* UIView+Extra.h */,
+				EE0ECC7A1B5FA5AA005639BF /* UIView+Extra.m */,
 				EE0ECC501B5FA503005639BF /* AppDelegate.h */,
 				EE0ECC511B5FA503005639BF /* AppDelegate.m */,
 				EE0ECC531B5FA503005639BF /* ViewController.h */,
@@ -89,6 +106,8 @@
 				EE0ECC591B5FA503005639BF /* Images.xcassets */,
 				EE0ECC5B1B5FA503005639BF /* LaunchScreen.xib */,
 				EE0ECC4C1B5FA503005639BF /* Supporting Files */,
+				EE0ECC7C1B5FA64F005639BF /* PlayerViewController.h */,
+				EE0ECC7D1B5FA64F005639BF /* PlayerViewController.m */,
 			);
 			path = WLVedioPlayerDemo;
 			sourceTree = "<group>";
@@ -96,6 +115,7 @@
 		EE0ECC4C1B5FA503005639BF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EE0ECC7F1B5FA887005639BF /* videoviewdemo.mp4 */,
 				EE0ECC4D1B5FA503005639BF /* Info.plist */,
 				EE0ECC4E1B5FA503005639BF /* main.m */,
 			);
@@ -117,6 +137,17 @@
 				EE0ECC671B5FA503005639BF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE0ECC721B5FA51C005639BF /* WLVedioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				EE0ECC731B5FA52B005639BF /* WLVedioPlayer.h */,
+				EE0ECC741B5FA52B005639BF /* WLVedioPlayer.m */,
+				EE0ECC761B5FA539005639BF /* PlayerView.h */,
+				EE0ECC771B5FA539005639BF /* PlayerView.m */,
+			);
+			path = WLVedioPlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +233,7 @@
 				EE0ECC581B5FA503005639BF /* Main.storyboard in Resources */,
 				EE0ECC5D1B5FA503005639BF /* LaunchScreen.xib in Resources */,
 				EE0ECC5A1B5FA503005639BF /* Images.xcassets in Resources */,
+				EE0ECC801B5FA887005639BF /* videoviewdemo.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +251,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE0ECC7E1B5FA64F005639BF /* PlayerViewController.m in Sources */,
 				EE0ECC551B5FA503005639BF /* ViewController.m in Sources */,
 				EE0ECC521B5FA503005639BF /* AppDelegate.m in Sources */,
+				EE0ECC751B5FA52B005639BF /* WLVedioPlayer.m in Sources */,
 				EE0ECC4F1B5FA503005639BF /* main.m in Sources */,
+				EE0ECC781B5FA539005639BF /* PlayerView.m in Sources */,
+				EE0ECC7B1B5FA5AA005639BF /* UIView+Extra.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
