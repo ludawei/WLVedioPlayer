@@ -12,8 +12,6 @@
 @interface WLVedioPlayer : UIViewController
 
 @property (nonatomic,strong) NSURL *url;
-@property (nonatomic) BOOL showShare;
-
 @property (nonatomic,assign) BOOL fullStatus;
 
 @property (nonatomic ,strong) PlayerView *playerView;

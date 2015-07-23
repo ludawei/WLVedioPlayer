@@ -28,6 +28,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.title = @"播放";
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(navBack)];
+    
+    
+    /******************************************  自定义views  ********************************************/
     UIButton *playButton = [[UIButton alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.playerView.frame)-40, 40, 40)];
     playButton.backgroundColor = [UIColor colorWithWhite:0 alpha:0.6];
     [playButton setImage:[UIImage imageNamed:@"icon_info_play"] forState:UIControlStateNormal];
@@ -52,6 +57,12 @@
     [self.slider setThumbImage:[UIImage imageNamed:@"icon_video_pre_slider_thuml"] forState:UIControlStateNormal];
     [self.bottomView addSubview:self.slider];
     
+    
+    UILabel *testLbl = [[UILabel alloc] initWithFrame:self.bottomView.bounds];
+    testLbl.text = @"这里是可以自定义view";
+    testLbl.textColor = [UIColor whiteColor];
+    testLbl.textAlignment = NSTextAlignmentCenter;
+    [self.bottomView addSubview:testLbl];
 }
 
 #pragma mark - 子类使用
@@ -78,22 +89,20 @@
 -(void)setCustomViewHidden:(BOOL)hidden
 {
     isFullScreen = hidden;
-//    if (hidden) {
-//        self.navigationItem.rightBarButtonItem = nil;
-//        [self.navigationController.navigationBar setBackgroundImage:[Common createImageWithColor:[UIColor colorWithWhite:0 alpha:0.5] width:1 height:44] forBarMetrics:UIBarMetricsDefault];
-//        
-//        [self.textField resignFirstResponder];
-//    }
-//    else
-//    {
-//        //        self.navigationItem.rightBarButtonItem = self.rightBarItem;
-//        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"icon_nav"] forBarMetrics:UIBarMetricsDefault];
-//    }
+    if (hidden) {
+        [self.navigationController.navigationBar setBackgroundImage:[self createImageWithColor:[UIColor colorWithWhite:0 alpha:0.5] width:1 height:44] forBarMetrics:UIBarMetricsDefault];
+        
+    }
+    else
+    {
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"icon_nav"] forBarMetrics:UIBarMetricsDefault];
+    }
     self.playButton.hidden = hidden;
     self.vedioExpButton.hidden = hidden;
     self.bottomView.hidden = hidden;
 }
 
+#pragma mark - actions
 
 -(void)clickFullExp
 {
@@ -104,5 +113,31 @@
 -(void)clickPlayButton
 {
     [self stateButtonTouched];
+}
+
+-(void)navBack
+{
+    if (isFullScreen) {
+        if ([self respondsToSelector:@selector(expButtonTouched)]) {
+            [self performSelector:@selector(expButtonTouched)];
+        }
+    }
+    else
+    {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+}
+
+- (UIImage *) createImageWithColor: (UIColor *) color width:(CGFloat)width height:(CGFloat)height
+{
+    CGRect rect=CGRectMake(0.0f, 0.0f, width, height);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return theImage;
 }
 @end

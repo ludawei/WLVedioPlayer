@@ -119,36 +119,10 @@
     [self.toolView addSubview:self.expButton];
     
     self.toolView.hidden = !self.fullStatus;
-    
-//    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(5, 0, 40, 40)];
-//    button.showsTouchWhenHighlighted = YES;
-//    [button setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
-//    [button addTarget:self action:@selector(backButtonClicked) forControlEvents:UIControlEventTouchUpInside];
-//    button.backgroundColor = [UIColor clearColor];
-//    [self.view addSubview:button];
-//    self.closeButton = button;
-//    self.closeButton.hidden = YES;
-    
-//    UIButton *button1 = [[UIButton alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 45, 0, 40, 40)];
-//    button1.showsTouchWhenHighlighted = YES;
-////    [button1 setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
-//    [button1 setTitle:@"分享" forState:UIControlStateNormal];
-//    [button1 addTarget:self action:@selector(shareButtonClicked) forControlEvents:UIControlEventTouchUpInside];
-//    button1.backgroundColor = [UIColor clearColor];
-//    [self.view addSubview:button1];
-//    self.shareButton = button1;
-//    self.shareButton.hidden = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    // 晚一点，再显示close
-    if (self.showShare) {
-        self.shareButton.hidden = NO;
-    }
-    
-//    [self stateButtonTouched];
     
     isLoaded = YES;
     
@@ -175,8 +149,6 @@
         self.videoSlider.frame = self.videoProgress.frame;
         self.totalTimeLabel.frame = CGRectMake(CGRectGetMaxX(self.videoSlider.frame), 0, buttonWidth, toolHeight);
         self.expButton.frame = CGRectMake(toolWidth-buttonWidth, 0, buttonWidth, toolHeight);
-        
-//        self.shareButton.frame = CGRectMake(self.view.bounds.size.width - 45, 0, 40, 40);
 
     }
     else
@@ -185,7 +157,10 @@
         self.toolView.hidden = !self.fullStatus;
     }
     
-    [self setCustomViewHidden:self.fullStatus];
+    // 子类调用
+    if ([self respondsToSelector:@selector(setCustomViewHidden:)]) {
+        [self setCustomViewHidden:self.fullStatus];
+    }
     self.playerView.frame = self.fullStatus?self.view.bounds:CGRectMake(0, 64, self.view.width, self.view.width*9/16);
 }
 
@@ -220,7 +195,9 @@
     self.timeLabel.text = timeString;//[NSString stringWithFormat:@"%@/%@",timeString,_totalTime];
     
     // 子类使用
-    [self setCurrentTime:timeString withSliderValue:currentSecond];
+    if ([self respondsToSelector:@selector(setCurrentTime:withSliderValue:)]) {
+        [self setCurrentTime:timeString withSliderValue:currentSecond];
+    }
 }
 
 #pragma mark - KVO方法
@@ -236,7 +213,9 @@
             self.totalTimeLabel.text = _totalTime;
             
             // 子类使用
-            [self setTotalTimeWithTime:_totalTime withMaxSliderValue:CMTimeGetSeconds(duration)];
+            if ([self respondsToSelector:@selector(setTotalTimeWithTime:withMaxSliderValue:)]) {
+                [self setTotalTimeWithTime:_totalTime withMaxSliderValue:CMTimeGetSeconds(duration)];
+            }
             
             [self customVideoSlider:duration];// 自定义UISlider外观
             LOG(@"movie total duration:%f",CMTimeGetSeconds(duration));
@@ -283,7 +262,9 @@
         [self.stateButton setImage:[UIImage imageNamed:@"icon_full_pause"] forState:UIControlStateNormal];
         
         // 子类使用
-        [self setPlayStatus:NO];
+        if ([self respondsToSelector:@selector(setPlayStatus:)]) {
+            [self setPlayStatus:NO];
+        }
     }
     
     if (!isPlay) {
@@ -291,7 +272,9 @@
         [self.stateButton setImage:[UIImage imageNamed:@"icon_full_play"] forState:UIControlStateNormal];
         
         // 子类使用
-        [self setPlayStatus:YES];
+        if ([self respondsToSelector:@selector(setPlayStatus:)]) {
+            [self setPlayStatus:YES];
+        }
     }
     _played = isPlay;
 }
@@ -303,13 +286,17 @@
         [self.stateButton setImage:[UIImage imageNamed:@"icon_full_pause"] forState:UIControlStateNormal];
         
         // 子类使用
-        [self setPlayStatus:NO];
+        if ([self respondsToSelector:@selector(setPlayStatus:)]) {
+            [self setPlayStatus:NO];
+        }
     } else {
         [self.playerView.player pause];
         [self.stateButton setImage:[UIImage imageNamed:@"icon_full_play"] forState:UIControlStateNormal];
         
         // 子类使用
-        [self setPlayStatus:YES];
+        if ([self respondsToSelector:@selector(setPlayStatus:)]) {
+            [self setPlayStatus:YES];
+        }
     }
     _played = !_played;
 }
@@ -334,7 +321,9 @@
         [self.stateButton setImage:[UIImage imageNamed:@"icon_full_pause"] forState:UIControlStateNormal];
         
         // 子类使用
-        [self setPlayStatus:NO];
+        if ([self respondsToSelector:@selector(setPlayStatus:)]) {
+            [self setPlayStatus:NO];
+        }
     }];
 }
 
@@ -351,7 +340,9 @@
         [self.stateButton setImage:[UIImage imageNamed:@"icon_full_play"] forState:UIControlStateNormal];
         
         // 子类使用
-        [self setPlayStatus:YES];
+        if ([self respondsToSelector:@selector(setPlayStatus:)]) {
+            [self setPlayStatus:YES];
+        }
     }];
 }
 
@@ -432,112 +423,4 @@
     [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
 }
 
-- (void)shareButtonClicked
-{
-//    [self.playerView.player pause];
-//    
-//    id<ISSCAttachment> img = [ShareSDK imageWithUrl:self.thumbUrl];
-//    
-//    NSString *url = [self.url description];
-//    NSString *text = [NSString stringWithFormat:@"知名天气主播%@为我录制的视频完成啦！“中国天气通”可以选择任意天气主播为我们定制私人天气预报，想说什么想送给谁，全都能满足哦！%@", self.anchorName, url];
-//    
-//    //构造分享内容
-//    id<ISSContent> publishContent = [ShareSDK content:text
-//                                       defaultContent:text
-//                                                image:img
-//                                                title:@"天气祝福"
-//                                                  url:url
-//                                          description:text
-//                                            mediaType:SSPublishContentMediaTypeVideo];
-//    
-//    //以下信息为特定平台需要定义分享内容，如果不需要可省略下面的添加方法
-//    
-//    //定制微信好友信息
-//    [publishContent addWeixinSessionUnitWithType:INHERIT_VALUE
-//                                         content:[NSString stringWithFormat:@"知名天气主播%@为我私人录制的视频！", self.anchorName]
-//                                           title:@"天气祝福"
-//                                             url:url
-//                                      thumbImage:img
-//                                           image:INHERIT_VALUE
-//                                    musicFileUrl:nil
-//                                         extInfo:nil
-//                                        fileData:nil
-//                                    emoticonData:nil];
-//    
-//    //定制微信朋友圈信息
-//    [publishContent addWeixinTimelineUnitWithType:[NSNumber numberWithInteger:SSPublishContentMediaTypeVideo]
-//                                          content:@""
-//                                            title:[NSString stringWithFormat:@"知名天气主播%@为我私人录制的视频！", self.anchorName]
-//                                              url:url
-//                                       thumbImage:img
-//                                            image:INHERIT_VALUE
-//                                     musicFileUrl:nil
-//                                          extInfo:nil
-//                                         fileData:nil
-//                                     emoticonData:nil];
-//    
-//    NSString *mailString = [NSString stringWithFormat:@"知名天气主播%@为我录制的视频完成啦！“中国天气通”可以选择任意天气主播为我们定制私人天气预报，想说什么想送给谁，全都能满足哦！<br /><a>%@<a/>",self.anchorName, url];
-//    //定制邮件信息
-//    [publishContent addMailUnitWithSubject:@"天气祝福"
-//                                   content:mailString
-//                                    isHTML:[NSNumber numberWithBool:YES]
-//                               attachments:INHERIT_VALUE
-//                                        to:nil
-//                                        cc:nil
-//                                       bcc:nil];
-//    
-//    //结束定制信息
-//    ////////////////////////
-//    
-//    
-//    //创建弹出菜单容器
-//    id<ISSContainer> container = [ShareSDK container];
-//    //    [container setIPadContainerWithView:sender arrowDirect:UIPopoverArrowDirectionUp];
-//    [container setIPhoneContainerWithViewController:self];
-//    
-//    id<ISSAuthOptions> authOptions = [ShareSDK authOptionsWithAutoAuth:YES
-//                                                         allowCallback:NO
-//                                                         authViewStyle:SSAuthViewStyleFullScreenPopup
-//                                                          viewDelegate:nil
-//                                               authManagerViewDelegate:nil];
-//    
-//    id<ISSShareOptions> shareOptions = [ShareSDK simpleShareOptionsWithTitle:@"天气祝福"
-//                                                           shareViewDelegate:nil];
-//    
-//    //创建自定义分享列表
-//    NSArray *shareList = [ShareSDK customShareListWithType:
-//                          SHARE_TYPE_NUMBER(ShareTypeWeixiSession),
-//                          SHARE_TYPE_NUMBER(ShareTypeWeixiTimeline),
-//                          SHARE_TYPE_NUMBER(ShareTypeSinaWeibo),
-//                          //                          SHARE_TYPE_NUMBER(ShareTypeTencentWeibo),
-//                          //                          SHARE_TYPE_NUMBER(ShareTypeQQ),
-//                          SHARE_TYPE_NUMBER(ShareTypeMail),
-//                          nil];
-//    
-//    //弹出分享菜单
-//    __weak typeof(self) weakSelf = self;
-//    [ShareSDK showShareActionSheet:container
-//                         shareList:shareList
-//                           content:publishContent
-//                     statusBarTips:YES
-//                       authOptions:authOptions
-//                      shareOptions:shareOptions
-//                            result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
-//                                
-//                                if (state == SSPublishContentStateSuccess)
-//                                {
-//                                    NSLog(NSLocalizedString(@"TEXT_SHARE_SUC", @"分享成功"));
-//                                    [MBProgressHUD showHUDLongNoteWithText:@"分享成功"];
-//                                }
-//                                else if (state == SSPublishContentStateFail)
-//                                {
-//                                    NSLog(NSLocalizedString(@"TEXT_SHARE_FAI", @"分享失败,错误码:%d,错误描述:%@"), [error errorCode], [error errorDescription]);
-//                                    [MBProgressHUD showHUDLongNoteWithText:@"分享失败"];
-//                                }
-//                                
-//                                if ([weakSelf.playerView.player rate] == 0 && self.videoSlider.value > 0) {
-//                                    [weakSelf.playerView.player play];
-//                                }
-//                            }];
-}
 @end

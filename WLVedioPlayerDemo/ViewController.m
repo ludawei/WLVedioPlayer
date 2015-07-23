@@ -34,7 +34,9 @@
     
     PlayerViewController *next = [PlayerViewController new];
     next.url = filePath;
-    [self presentViewController:next animated:YES completion:nil];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:next];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
